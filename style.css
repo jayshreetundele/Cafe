@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #222222;
+  color: #f6f6f6;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  padding: 20px 120px 20px 120px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.navbar .navLinks ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar .navLinks {
+  width: 450px;
+}
+
+.navbar .navLinks .navLink {
+  font-size: 22px;
+  font-weight: 500;
+  transition: all 200ms;
+}
+
+.navbar .navLinks .navLink:hover {
+  color: #c1ff73;
+}
+
+.navbar .navLinks .navLink:empty {
+  color: #c1ff73;
+}
+
+/* Go to top button */
+.circleBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  padding: 20px;
+  clip-path: circle(40%);
+  background-color: #c1ff73;
+  color: #222222;
+  cursor: pointer;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.circleBtn .material-icons {
+  font-size: 32px;
+}
+
+.circleBtn:hover {
+  transform: translateY(-8px);
+}
+
+/* Hero Section */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1481833761820-0509d3217039?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Something went wrong */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero .overlay {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .text {
+  font-size: 48px;
+  font-family: "Bree Serif", serif;
+}
+
+.hero .btn {
+  background-color: #c1ff73;
+  color: #222222;
+  padding: 15px 40px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* services */
+
+.services {
+  width: 100%;
+  padding: 100px 120px;
+  background-color: #222222;
+}
+
+.services .heading {
+  font-size: 42px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  color: #c1ff73;
+}
+
+.services .cardRow {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .cardRow .card {
+  background-color: #424242;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 200ms;
+}
+
+.services .cardRow .card:hover {
+  transform: scale(1.04);
+}
+.services .cardRow .card .icon .material-icons {
+  font-size: 64px;
+  padding: 10px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.services .cardRow .card:hover .icon .material-icons {
+  color: #c1ff73;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.services .cardRow .card:hover .cardTitle {
+  color: #c1ff73;
+  transition: all 200ms;
+}
+.services .cardRow .card .cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 200ms;
+}
+
+.services .cardRow .card .cardContent {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Booking */
+.booking {
+  margin: 0 140px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1494233914995-8c8b438d3f60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.booking .overlay {
+  padding: 100px 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.booking .heading {
+  font-size: 42px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  color: #c1ff73;
+}
+
+.booking .content {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.booking .btnholder {
+  margin: 40px;
+}
+
+.booking .btn {
+  background-color: #c1ff73;
+  color: #222222;
+  padding: 15px 40px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* tablet view */
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 100px 120px;
+  }
+  .services .cardRow {
+    flex-direction: column;
+  }
+  .booking {
+    padding: 0 50px;
+  }
+  .booking .overlay {
+    padding: 50px 50px;
+  }
+}
+
+/* Moblile view */
+@media screen and (max-width: 640px) {
+  .hero .text {
+    font-size: 32px;
+  }
+  .booking .overlay {
+    padding: 50px 50px;
+  }
+}
